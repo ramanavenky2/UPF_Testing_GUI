@@ -9,6 +9,7 @@ $rule_id=$_POST["rule_id"];
 $ipv4_dst=$_POST["ipv4_dst"];
 $priority=$_POST["priority"]; 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,20 +37,14 @@ $priority=$_POST["priority"];
 </html>
 
 <?php
-//nl2br(system("python test.py  --a=$seid --b=$pdr_state --c=$in_teid --d=$out_teid --e=$ue_ip_addr --f=$gnb_ip_addr --g=$rule_id --h=$ipv4_dst --i=$priority"));
-//echo $o
-$output=[];
-exec("python test.py  --a=$seid --b=$pdr_state --c=$in_teid --d=$out_teid --e=$ue_ip_addr --f=$gnb_ip_addr --g=$rule_id --h=$ipv4_dst --i=$priority 2>&1", $output);
-//echo '<pre>';
-//print_r($output);
-//echo '</pre>';
-//$Output = implode($output);
+$output=[];	//output to store the output of pipelined_test.py
+
+exec("python3 pipelined_test.py --subscriber_id=$seid --pdr_state=$pdr_state --in_teid=$in_teid --out_teid=$out_teid --ue_ip_addr=$ue_ip_addr --gnb_ip_addr=$gnb_ip_addr --add_rule_id=$rule_id --ipv4_dst=$ipv4_dst --priority=$priority 2>&1", $output);	//executing the pipelined_test.py and storing the output in $output array 
+
 $l=count($output);
-for($x=0;$x<$l;$x++){
-    echo "<pre>           <b style=color:firebrick;font-size:x-large;>$output[$x]</b></pre>";  
-}
-//foreach($output as $x => $value) {
-//    echo $value;
-//}
-//system('python C:/Users/venky/Desktop/test2.py');
+
+	for($x=0;$x<$l;$x++){	
+    		echo "<pre><b style=color:firebrick;font-size:x-large;>$output[$x]</b></pre>";  		//traversing array and printing each element in a new line. 
+	}
+
 ?>
