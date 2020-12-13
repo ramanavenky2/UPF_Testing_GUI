@@ -1,7 +1,7 @@
 import argparse
 parser = argparse.ArgumentParser()
 
-parser.add_argument( '--subscriber_id')	#expects command line argument value for subscriber_id
+parser.add_argument( '--subscriber_id')	    #expects command line argument value for subscriber_id
 parser.add_argument( '--pdr_state')		#expects command line argument value for pdr_state
 parser.add_argument( '--in_teid')		#expects command line argument value for in_teid
 parser.add_argument( '--out_teid')		#expects command line argument value for ot_teid
