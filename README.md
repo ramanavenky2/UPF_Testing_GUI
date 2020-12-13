@@ -12,9 +12,9 @@ Steps to install php :
 Steps to start the apache server :
   sudo systemctl start apache2
   
-Go to the browser and call the server using http//localhost or 127.0.0.1
+Go to the browser and call the server using localhost or 127.0.0.1
 This displays the index.html page by default.
-On clicking submit after filling the details a POST request is sent to index.php where the data is processed and the file is executed.
+On clicking submit after filling the details a POST request is sent to index.php where the data is processed and the pipelined_test.py file is executed.
 The output is displayed back on the browser.
   
   
