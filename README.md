@@ -1,5 +1,5 @@
 # UPF_Testing_GUI
-The setup performs testing of user plane function implemented as pipelined_cli.py.
+The test setup performs testing of user plane function using a web based user interface.
 
 SETUP :
 
