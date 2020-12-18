@@ -17,7 +17,7 @@ Steps to install php :
   
 EXECUTION:
  
-1)Paste the index.html index.php and pipelined_test.py files in the /var/www/html directory.
+1)Paste the index.html, index.php and pipelined_test.py files in the /var/www/html directory.
 
 2)Start the apache server : sudo systemctl start apache2
   
