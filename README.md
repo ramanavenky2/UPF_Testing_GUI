@@ -9,6 +9,7 @@ The test setup performs testing of user plane function.The user plane fucntion i
 ### Prerequisites
 
 Create a Ubuntu virtual machine.
+
 Install Apache : 
 ```
 sudo apt update
