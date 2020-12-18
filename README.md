@@ -11,6 +11,9 @@ Steps to install php :
   sudo apt update
   sudo apt install php libapache2-mod-php
   
+
+
+
   
 EXECUTION:
  
